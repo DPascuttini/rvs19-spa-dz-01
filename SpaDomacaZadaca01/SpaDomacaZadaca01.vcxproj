@@ -156,10 +156,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cvijet.cpp" />
+    <ClCompile Include="Pozadina.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Sunce.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cvijet.h" />
+    <ClInclude Include="Pozadina.h" />
+    <ClInclude Include="Sunce.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

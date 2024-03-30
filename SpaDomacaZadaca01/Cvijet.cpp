@@ -1,12 +1,22 @@
 #include "Cvijet.h"
 
 Cvijet::Cvijet(sf::RenderWindow* window)
-	: window(window)
+	: window(window), sunce(30.f, 50.f), pozadina (*window)
 {
+
 }
+
+
 
 void Cvijet::draw()
 {	
+	//pozadina
+	pozadina.draw(*window);
+
+	//sunce
+	sunce.draw(*window);
+
+
 	//stabljika
 	sf::RectangleShape stabljika(sf::Vector2f(250.f, 7.f));
 	stabljika.setFillColor(sf::Color(34, 139, 34));
@@ -35,5 +45,13 @@ void Cvijet::draw()
 	cvijet.setPosition(260.f, 260.f);
 	cvijet.setFillColor(sf::Color(255, 255, 0));
 	window->draw(cvijet);
+
+
 }
+
+void Cvijet::animate(float deltaTime)
+{
+	sunce.move(deltaTime);
+}
+
 

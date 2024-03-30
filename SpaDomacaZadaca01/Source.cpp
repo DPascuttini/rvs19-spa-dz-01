@@ -14,6 +14,10 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
+		static sf::Clock clock;
+		float deltaTime = clock.restart().asSeconds();
+		cvijet.animate(deltaTime);
+
 		window.clear();
 		cvijet.draw();
 		window.display();
